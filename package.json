@@ -1,6 +1,6 @@
 {
   "name": "prompt-merge",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Conditionally merge LLM prompts into a single prompt.",
   "license": "MIT",
   "author": "zrosenbauer",
