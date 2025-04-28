@@ -1,6 +1,6 @@
 # prompt-merge
 
-Conditionally combine and merge LLM prompts into a single string.
+Zero-dependency library for conditionally merging LLM (system) prompts into a single string.
 
 ## Installation
 
@@ -14,18 +14,14 @@ npm install prompt-merge
 import pm from "prompt-merge";
 import { generateText } from "ai";
 
-const prompt = promptMerge(
-  "You are a helpful assistant.",
-  "You are a helpful assistant.",
-);
-
 const result = await generateText({
   model: openai("gpt-4o"),
   system: pm(
     "You are a helpful assistant.",
     canTranslate && "You can translate text.",
     {
-      "You support multiple languages.": canTranslate,
+      "You support translating Japanese to English": canTranslateJapanese,
+      "You support translating German to English": canTranslateGerman,
     }
   ),
   messages,
