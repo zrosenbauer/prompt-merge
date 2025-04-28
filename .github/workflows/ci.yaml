@@ -1,0 +1,55 @@
+name: 'Code Standards & Testing' 
+
+on:
+  pull_request:
+    types: [synchronize, opened, reopened, ready_for_review]
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    name: Continuous Integration Suite
+    timeout-minutes: 7
+    if: ${{ !github.event.pull_request.draft }}
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: '⬇️ Checkout Code'        
+        uses: actions/checkout@v4
+        
+      - name: '💚 Setup Node'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'yarn'
+          
+      - name: '📦 Install Packages'
+        run: yarn install
+
+      - name: '🕵️ Code Linting & Formatting'
+        run: yarn turbo check
+        
+      - name: '🟦 Typecheck'
+        run: yarn turbo types
+
+      - name: '🤡 Test'
+        run: yarn turbo test 
+
+  dependabot:
+    name: 'Dependabot (auto-merge)'
+    needs: [ci]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: ${{ github.actor == 'dependabot[bot]' && github.event_name == 'pull_request'}} # Detect that the PR author is dependabot
+    steps:
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --auto --squash "$PR_URL" # Use GitHub CLI to automatically merge the PR
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
