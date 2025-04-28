@@ -1,0 +1,22 @@
+name: 'auto: Release Notes Drafter'
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+    paths:
+      - src/**
+      - auto-release-notes.yaml
+      
+concurrency:
+  group: auto-release-notes-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update_draft_release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: release-drafter/release-drafter@v6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
