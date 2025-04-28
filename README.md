@@ -1,4 +1,5 @@
 # prompt-merge
+[![Code Standards & Testing](https://github.com/zrosenbauer/prompt-merge/actions/workflows/ci.yaml/badge.svg)](https://github.com/zrosenbauer/prompt-merge/actions/workflows/ci.yaml)
 
 Zero-dependency library for conditionally merging LLM (system) prompts into a single string.
 

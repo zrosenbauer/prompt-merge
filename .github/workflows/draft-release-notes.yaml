@@ -1,4 +1,4 @@
-name: 'auto: Release Notes Drafter'
+name: 'Draft Release Notes'
 
 on:
   workflow_dispatch: {}
