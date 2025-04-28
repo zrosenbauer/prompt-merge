@@ -42,7 +42,7 @@ This package was inspired by two packages I've used for managing classNames (whi
 <hr>
 <div align="center">
   <h2>Sponsorship</h1>
-  <sup>Special thanks to:</sup>
+  <div><sup>Special thanks to:</sup></div>
   <br>
   <br>
   <a href="https://www.joggr.io/?utm_source=github&utm_medium=org-readme&utm_campaign=static-docs">
