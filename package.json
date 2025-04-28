@@ -2,7 +2,7 @@
   "name": "prompt-merge",
   "version": "1.0.0",
   "description": "Conditionally merge LLM prompts into a single prompt.",
-  "packageManager": "yarn@4.6.0",
+  "packageManager": "yarn@4.9.1",
   "type": "module",
   "exports": {
     ".": {
