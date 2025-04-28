@@ -6,7 +6,7 @@ categories:
       - 'enhancement'
   - title: '🐛 Bugfixes'
     labels:
-      - 'bugfix'
+      - 'bug'
   - title: '📖 Documentation'
     labels:
       - 'documentation'
