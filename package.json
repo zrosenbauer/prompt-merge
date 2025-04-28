@@ -2,6 +2,9 @@
   "name": "prompt-merge",
   "version": "1.0.0",
   "description": "Conditionally merge LLM prompts into a single prompt.",
+  "license": "MIT",
+  "author": "zrosenbauer",
+  "repository": "https://github.com/joggr/prompt-merge",
   "packageManager": "yarn@4.9.1",
   "type": "module",
   "exports": {
