@@ -22,11 +22,7 @@
       }
     }
   },
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
-  ],
+  "files": ["dist", "LICENSE", "README.md"],
   "scripts": {
     "prepublishOnly": "yarn build",
     "build": "tsup",
