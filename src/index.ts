@@ -1,4 +1,5 @@
-export {
-  promptMerge as default,
-  type PromptMergeArgs,
-} from "./lib/prompt-merge.ts";
+import { promptMerge } from "./lib/prompt-merge.ts";
+
+export type { PromptMergeArgs } from "./lib/prompt-merge.ts";
+export { promptMerge };
+export default promptMerge;

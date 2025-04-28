@@ -1,6 +1,6 @@
 {
   "name": "prompt-merge",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Conditionally merge LLM prompts into a single prompt.",
   "license": "MIT",
   "author": "zrosenbauer",
@@ -10,8 +10,7 @@
   },
   "packageManager": "yarn@4.9.1",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
@@ -21,7 +20,7 @@
       },
       "import": {
         "types": "./dist/index.d.ts",
-        "require": "./dist/index.js"
+        "default": "./dist/index.js"
       }
     }
   },
