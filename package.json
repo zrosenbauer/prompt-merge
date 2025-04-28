@@ -4,7 +4,10 @@
   "description": "Conditionally merge LLM prompts into a single prompt.",
   "license": "MIT",
   "author": "zrosenbauer",
-  "repository": "https://github.com/joggr/prompt-merge",
+  "repository": {
+    "url": "git+https://github.com/zrosenbauer/prompt-merge.git",
+    "type": "git"
+  },
   "packageManager": "yarn@4.9.1",
   "type": "module",
   "exports": {
@@ -19,6 +22,11 @@
       }
     }
   },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "prepublishOnly": "yarn build",
     "build": "tsup",
