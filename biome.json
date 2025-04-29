@@ -2,7 +2,7 @@
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "files": {
     "maxSize": 10485760,
-    "ignore": []
+    "ignore": ["dist", "node_modules", "package.json"]
   },
   "formatter": {
     "enabled": true,
