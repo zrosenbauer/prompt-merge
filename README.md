@@ -5,7 +5,9 @@
 
 # prompt-merge
 
+![NPM Version](https://img.shields.io/npm/v/prompt-merge)
 [![Code Standards & Testing](https://github.com/zrosenbauer/prompt-merge/actions/workflows/ci.yaml/badge.svg)](https://github.com/zrosenbauer/prompt-merge/actions/workflows/ci.yaml)
+[![Checked with Biome](https://img.shields.io/badge/Checked_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
 
 Zero-dependency library for conditionally merging LLM (system) prompts into a single string.
 
