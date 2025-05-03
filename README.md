@@ -1,5 +1,5 @@
 <div>
-  <img src="/banner.png" alt="banner for prompt merge" />
+  <img src="/prompt-merge-banner.png" alt="banner for prompt merge" />
 </div>
 
 
