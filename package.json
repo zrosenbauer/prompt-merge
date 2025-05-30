@@ -41,11 +41,11 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@tsconfig/node-ts": "^23.6.1",
-    "@tsconfig/node22": "^22.0.1",
-    "@vitest/coverage-istanbul": "^3.1.2",
-    "tsup": "^8.4.0",
-    "turbo": "^2.5.2",
+    "@tsconfig/node22": "^22.0.2",
+    "@vitest/coverage-istanbul": "^3.1.4",
+    "tsup": "^8.5.0",
+    "turbo": "^2.5.4",
     "typescript": "^5.8.3",
-    "vitest": "^3.1.2"
+    "vitest": "^3.1.4"
   }
 }
